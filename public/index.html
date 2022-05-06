@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Firebase App</title>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-analytics.js";
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js';
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js';
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAtYXvWw9HSPViLW4s1R8ZvQnSkSO3rznI",
+      authDomain: "first-firebase-test-1429b.firebaseapp.com",
+      projectId: "first-firebase-test-1429b",
+      storageBucket: "first-firebase-test-1429b.appspot.com",
+      messagingSenderId: "620700613630",
+      appId: "1:620700613630:web:79c0de6fcc53197552deaf",
+      measurementId: "G-5YJV5E11Y3"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h1>My First Firebase App</h1>
+
+  <section id="whenSignedOut">
+    
+    <button id="signInBtn" class="btn btn-primary">Sign in with Google</button>
+
+  </section>
+
+  <section id="whenSignedIn" hidden="true">
+
+    <div id="userDetails"></div>
+
+    <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+
+  </section>
+
+
+</body>
+</html>
